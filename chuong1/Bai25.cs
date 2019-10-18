@@ -69,12 +69,25 @@ namespace Baitap25
                 Console.WriteLine("Nhập k:");
                 k = Convert.ToInt16(Console.ReadLine());
 
-            } while (k<=0);
+            } while (k <= 0);
             int demluythua = 0;
 
             for (int i = 0; i < n; i++)
-                if (arr[i] % k == 0)
-                    demluythua++;
+            {
+                int j = 0;
+                double pow = Math.Pow(k, j);
+                while (pow <= arr[i])
+                {
+                    if (pow == arr[i])
+                    {
+                        demluythua++;
+                        break;
+                    }
+                    pow = Math.Pow(k, j);
+                    j++;
+                }
+            }
+
             Console.WriteLine("Số phần tử là lũy thừa của {0} là: {1}", k, demluythua);
 
             Console.ReadLine();
