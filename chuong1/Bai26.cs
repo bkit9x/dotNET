@@ -72,7 +72,7 @@ namespace Baitap26
             Console.WriteLine("Nhập vị trí bắt đàu k:");
             k = Convert.ToInt16(Console.ReadLine());
             int[] sarr = new int[m];
-            int vtk = 1;
+            int vtk = 0;
             if (k<n)
             {
                 while (vtk < m && vtk+k < n)
